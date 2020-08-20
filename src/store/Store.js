@@ -4,7 +4,9 @@ import { routerMiddleware, connectRouter } from 'connected-react-router'
 import { createBrowserHistory } from "history";
 import list from "../modules/home/ListReducer";
 
-export const history = createBrowserHistory();
+export const history = createBrowserHistory(
+	{basename: '/ReactList/'
+});
 
 const rootReducer = combineReducers({
   list,

@@ -6,7 +6,7 @@ import ViewsContainer from './modules/commons/ViewsContainer';
 
 const App = () => (
   <Provider store={store}>
-    <ConnectedRouter history={history} basename='/ReactList'>
+    <ConnectedRouter history={history}>
        <ViewsContainer />
     </ConnectedRouter>
   </Provider>
