@@ -51,7 +51,7 @@ export const edit = param => dispatch => {
 };
 
 export const list = param => dispatch => {
-  dispatch(push("/ReactList"));
+  dispatch(push("/"));
 };
 
 export const getPostById = param => dispatch => {
