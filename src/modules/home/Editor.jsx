@@ -28,12 +28,14 @@ const Editor = (props) => {
   };
 
   return (props.post ? <div className="container">
+      <h2>Edit</h2>
        <div className="label_css"><label >Title</label></div>
             <div> <textarea value={title} onChange={(e) => setTitle(e.target.value)} /></div>
        <div  className="label_css" ><label >Body</label></div>
           <div> <textarea value={body} onChange={(e) => setBody(e.target.value)} /></div>
         <div className="center"> 
          <button  onClick={() => { props.updatePost({ id: props.post.id, title: title, body: body }) }}>Save</button>
+         <button onClick={() => props.list()}>Cancel</button>
         </div>
   </div > : "")
 };
