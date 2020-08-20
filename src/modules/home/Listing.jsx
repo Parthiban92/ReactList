@@ -33,6 +33,9 @@ const styles = {
   },
   column: {
     flex: 1
+  },
+  action: {
+    margin: "15px"
   }
 };
 
@@ -50,7 +53,7 @@ const List = ({ listAction, edit, listingInProgress, posts }) => {
         return <div style={styles.row} key={post.id}>
           <div style={styles.column}>{post.title}</div>
           <div style={styles.column}>{post.body}</div>
-          <div style={styles.column}><button onClick={() => edit(post.id)}>Edit</button></div>
+          <div style={styles.column}><button style={styles.action} onClick={() => edit(post.id)}>Edit</button></div>
         </div>
       }) : ""}
     </div>
